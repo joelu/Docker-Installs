@@ -1,0 +1,15 @@
+version: "2.1"
+services:
+  doublecommander:
+    image: lscr.io/linuxserver/doublecommander
+    container_name: doublecommander
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Los_Angeles
+    volumes:
+      - /home/joelu/Docker/DoubleCommander/Config:/config
+      - /home/joelu/Docker/DoubleCommander/Data:/data
+    ports:
+      - 3030:3000
+    restart: unless-stopped
