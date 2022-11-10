@@ -1,0 +1,13 @@
+version: "2"
+services:
+  mealie:
+    container_name: mealie
+    image: hkotel/mealie:latest
+    restart: always
+    ports:
+      - 9000:80
+    environment:
+      db_type: sqlite
+      TZ: America/Los_Angeles
+    volumes:
+      - /srv/dev-disk-by-uuid-c100c6c3-98ff-44b4-b70d-2337a151cd30/Config/mealie:/app/data

@@ -1,0 +1,12 @@
+version: '2'
+services:
+    container_name: wekan-db
+    restart: always
+    command: mongod --oplogSize 128
+    networks:
+      - wekan-tier
+    expose:
+      - 27017
+    volumes:
+      - wekan-db:/data/db
+      - wekan-db-dump:/dump
