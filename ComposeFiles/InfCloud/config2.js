@@ -1,10 +1,11 @@
 var globalAccountSettings=[
 	{
-		href: 'http://34.219.248.188:5232/joelu/',
+		href: 'https://server1.com:8443/caldav.php/USERNAME1/',
 		userAuth:
 		{
-			userName: 'joelu',
-			userPassword: 'gsg08joelU'},
+			userName: 'USERNAME1',
+			userPassword: 'PASSWORD1'
+		},
 		timeOut: 90000,
 		lockTimeOut: 10000,
 		checkContentType: true,
@@ -16,7 +17,9 @@ var globalAccountSettings=[
 		backgroundCalendars: []
 	},
 	{
-		href: 'http://34.219.248.188:5232/joelu/',
+		href: 'https://server2.com:8443/caldav.php/USERNAME2/',
+		...
+		...
 	}
 ];
 
