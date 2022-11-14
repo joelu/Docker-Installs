@@ -7,7 +7,7 @@ services:
     depends_on:
       - php
     ports:
-      - "80:80"
+      - "5649:80"
     volumes:
       - infcloud:/usr/share/nginx/infcloud
       - ./config.js:/usr/share/nginx/infcloud/config.js:ro
