@@ -1,0 +1,20 @@
+  GNU nano 6.2                    /home/joelu/Docker/Jump/docker-compose.yml
+version: '3'
+services:
+    web:
+        image: daledavies/jump
+        ports:
+            - 8123:8080
+        volumes:
+            - ./backgrounds:/backgrounds
+            - ./favicon:/favicon
+            - ./search:/search
+            - ./sites:/sites
+        environment:
+                     SITENAME: 'GS Launch Page'
+                     LATLONG: '45.5201,122.9898'
+                     SHOWCLOCK: 'true'
+                     AMPCLOCK: 'true'
+                     ALTLAYOUT: 'true'
+                     BGBLUR: 12
+                     BGBRIGHT: 97
