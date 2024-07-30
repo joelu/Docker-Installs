@@ -1,0 +1,17 @@
+##This works
+
+version: "2"
+services:
+  libreoffice:
+    image: linuxserver/libreoffice:7.6.7
+    container_name: libreoffice
+    restart: unless-stopped
+    environment:
+      - TZ=America/Los_Angeles # Specify a timezone to use
+      - PUID=1000 # User ID to run as
+      - PGID=1000 # Group ID to run as
+    volumes:
+      - /home/joelu/Docker/Dockge/stacks/libreoffice/config:/config # Contains all relevant configuration files.
+    ports:
+      - 3051:3000/tcp # LibreOffice desktop GUI
+networks: {}
