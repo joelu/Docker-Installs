@@ -1,0 +1,14 @@
+services:
+  tsdproxy:
+    image: almeidapaulopt/tsdproxy:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home/joelu/Docker/Dockge/stacks/tsdproxy/datadir:/data
+      - /home/joelu/Docker/Dockge/stacks/tsdproxy/config:/config
+    restart: unless-stopped
+    environment:
+      - TSNET_FORCE_LOGIN=1
+volumes:
+  datadir: null
+networks:
+  proxy-network: null
